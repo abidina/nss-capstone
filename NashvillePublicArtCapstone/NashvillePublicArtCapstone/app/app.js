@@ -11,6 +11,11 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
             templateUrl: "app/partials/login.html",
             controller: "LoginController"
         })
+        .when("/signup",
+        {
+            templateUrl: "app/partials/signup.html",
+            controller: "SignUpController"
+        })
         .when("/home",
         {
             templateUrl: "app/partials/grid-view.html",

@@ -3,6 +3,16 @@
 app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
     $routeProvider.when("/",
         {
+            templateUrl: "app/partials/login.html",
+            controller: "LoginController"
+        })
+        .when("/login",
+        {
+            templateUrl: "app/partials/login.html",
+            controller: "LoginController"
+        })
+        .when("/home",
+        {
             templateUrl: "app/partials/grid-view.html",
             controller: "DefaultController"
         })
@@ -13,4 +23,13 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
         });
 
     $locationProvider.html5Mode(true);
+
+}]);
+
+app.run(["$http", function ($http) {
+
+    var token = sessionStorage.getItem('token');
+
+    if (token)
+        $http.defaults.headers.common['Authorization'] = `bearer ${token}`;
 }]);

@@ -278,7 +278,9 @@
     <Content Include="app\APIFactory.js" />
     <Content Include="app\app.js" />
     <Content Include="app\DefaultController.js" />
+    <Content Include="app\LoginController.js" />
     <Content Include="app\partials\grid-view.html" />
+    <Content Include="app\partials\login.html" />
     <Content Include="app\partials\user-lists.html" />
     <Content Include="app\ProfileController.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
